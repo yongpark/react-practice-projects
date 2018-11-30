@@ -1,0 +1,10 @@
+.weather-app{
+  width: 100%;
+}
+
+.weather-card-container {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}

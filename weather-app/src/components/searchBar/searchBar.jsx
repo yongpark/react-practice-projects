@@ -5,7 +5,7 @@ export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchInput: 'Enter City',
+      searchInput: 'San Francisco',
     }
     this.handleChange = this.handleChange.bind(this);
   }
