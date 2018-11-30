@@ -19,6 +19,7 @@ export default class WeatherApp extends Component {
   };
 
   async fetchWeatherData(city)  {
+    console.log('here')
     try {
       let response = await axios.get('http://api.openweathermap.org/data/2.5/forecast?', {
         params: {
@@ -50,7 +51,7 @@ export default class WeatherApp extends Component {
         singleDayData.push(apiResponse[i])
       };
     }
-    this.setState({ weatherData, cityName })
+    this.setState({ weatherData, cityName, avgWeather: null })
   }
 
   getAverages() {
@@ -64,7 +65,6 @@ export default class WeatherApp extends Component {
       //taking first weather descriptor. can get avg later
       let weather = day[0].weather[0].description;
       let weatherIcon = day[0].weather[0].icon
-      console.log(day)
       day.forEach( (threeHours) => {
         minTemp = (minTemp > threeHours.main.temp_min ? threeHours.main.temp_min : minTemp);
         maxTemp = (maxTemp < threeHours.main.temp_max ? threeHours.main.temp_max : maxTemp)

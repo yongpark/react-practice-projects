@@ -2,17 +2,35 @@
   width: 50%;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .search-bar {
   width: 50%;
+  height: 50px;
   display: inline-block;
-  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(223, 217, 217, 0.644);
+  border: none;
+  border-radius: 2px;
+  transition:background-color 0.5s ease;
+  margin-left: auto;
+}
+
+.search-bar:focus {
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .search-button {
   width: 100px;
   height: 50px;
-  background-color: gray;
-  margin: auto;
+  padding: 0;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  margin-right: auto;
 }

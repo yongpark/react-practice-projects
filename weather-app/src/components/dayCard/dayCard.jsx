@@ -3,7 +3,6 @@ import './dayCard.css';
 export default class DayCard extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
       dayOfWeek: this.props.dayOfWeek,
       minTemp: this.props.minTemp,
