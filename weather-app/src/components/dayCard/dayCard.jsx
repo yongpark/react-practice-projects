@@ -3,17 +3,17 @@ import './dayCard.css';
 export default class DayCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dayOfWeek: this.props.dayOfWeek,
-      minTemp: this.props.minTemp,
-      maxTemp: this.props.maxTemp,
-      weather: this.props.weather,
-      iconURL: this.props.iconURL,
-    }
+    // this.state = {
+    //   dayOfWeek: this.props.dayOfWeek,
+    //   minTemp: this.props.minTemp,
+    //   maxTemp: this.props.maxTemp,
+    //   weather: this.props.weather,
+    //   iconURL: this.props.iconURL,
+    // }
   }
 
   render() {
-    const { dayOfWeek, minTemp, maxTemp, weather, iconURL } = this.state;
+    const { dayOfWeek, minTemp, maxTemp, weather, iconURL } = this.props;
     return(
       <div className='weather-card'>
         <div className='card-header'>

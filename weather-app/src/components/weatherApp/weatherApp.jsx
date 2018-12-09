@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import SearchBar from '../searchBar/searchBar.jsx';
-import DayCard from '../dayCard/dayCard.jsx';
+import SearchBar from '../searchBar/searchBar';
+import DayCard from '../dayCard/dayCard';
 import './weatherApp.css'
 
 export default class WeatherApp extends Component {
@@ -19,7 +19,6 @@ export default class WeatherApp extends Component {
   };
 
   async fetchWeatherData(city)  {
-    console.log('here')
     try {
       let response = await axios.get('http://api.openweathermap.org/data/2.5/forecast?', {
         params: {

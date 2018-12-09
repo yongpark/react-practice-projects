@@ -8,7 +8,7 @@ export default class SearchBar extends React.Component {
       searchInput: 'Enter City',
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleChange(e) {
